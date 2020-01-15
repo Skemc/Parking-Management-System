@@ -87,7 +87,7 @@ ul a{
     padding: 10px 40px;
     border: none;
     color: #fff;
-    background: #0029FA;
+    background: rgb(16, 16, 75);
     cursor: pointer;
 }
 .option input#comment {

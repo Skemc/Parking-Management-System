@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/gps-pin-icon-with-lines-dots-connecting-blue-color-white-background_99087-13.jpg);
+    background-image: url(../images/Annotation\ 2020-01-15\ 210450.png);
     background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -49,7 +49,7 @@ body {
 }
 .article-container-title {
     
-    border-bottom: 2px solid #0029FA;
+    border-bottom: 1px solid rgb(16, 16, 75);
     width: 33%;
     text-align: center;
 }
@@ -76,8 +76,7 @@ p#quote{
     margin-bottom: 10px
 }
 .article-card-flag {
-    /* border-bottom: 0.6px solid #0029FA; */
-    box-shadow: -4px 7px 7px -5px rgba(0,0,0,0.92);
+    border-left: 4px solid rgb(16, 16, 75);
     height: fit-content;
     padding: 0;
     position: relative;
@@ -86,14 +85,17 @@ p#quote{
     box-sizing: border-box;
 }
 .article-card-flag:hover {
-    outline: 0.6px solid #0029FA;
-    border-bottom: 0.6px solid #fff;
+    box-shadow: -4px 7px 7px -5px rgba(0,0,0,0.92);
+    border-left: 4px solid red;
+
+    /* outline: 0.6px solid #0029FA;
+    border-bottom: 0.6px solid #fff; */
     /* outline: 0.8px solid #0029FA; */
 
 }
 .g {
     display: flex;
-    padding: 40px 15px;
+    padding: 10px 15px 10px 10px;
 }
 .content-field {
 padding: 0 0 0 10px;
@@ -106,7 +108,8 @@ flex: 2;
 
 .parent {
   position: relative;
-  width: 100px;
+  width: 19%;
+  min-width: 70px;
   /* border: 1px solid blue */
 
 }

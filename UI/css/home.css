@@ -169,7 +169,7 @@ a:last-child:focus {
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color:#0029FA;
+	background-color:rgb(16, 16, 75);
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;

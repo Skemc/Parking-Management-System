@@ -134,8 +134,14 @@ h4#user_name {
     padding: 10px 40px;
     border: none;
     color: #fff;
-    background: #4F62E8;
+    outline: 1px solid rgb(16, 16, 75);
+    background: rgb(16, 16, 75);
     cursor: pointer;
+}
+.option #cancel {
+    color: rgb(16, 16, 75);
+    background: #fff;
+    outline: 1px solid rgb(16, 16, 75);
 }
 
 .quote {

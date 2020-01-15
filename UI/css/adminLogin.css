@@ -87,10 +87,10 @@ input::-webkit-input-placeholder {
      opacity: .8;
 }
 input{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 input:last-child{
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 .fields {
     width: 80%;
@@ -148,7 +148,7 @@ p.forget a{
   color: #fff;
   border-width: 0;
   border-style: groove;
-  background: #0029FA;
+  background: rgb(16, 16, 75);
   position: relative;
   width: fit-content;
   border-radius: 20px;
