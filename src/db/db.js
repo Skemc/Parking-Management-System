@@ -9,7 +9,6 @@ class Database {
     if (process.env.NODE_ENV === 'production') {
       return new Pool({
         connectionString: process.env.DATABASE_URL,
-        
       });
     }
 
@@ -18,36 +17,35 @@ class Database {
         connectionString: process.env.TEST_DB_URL,
       });
     }
+
   }
+
   static async createScripts() {
     const con = Database.connection();
     await con.query(`
     CREATE TABLE IF NOT EXISTS ADMIN (
-        userId SERIAL,
-        email VARCHAR(250),
-        username VARCHAR(250),
-        password VARCHAR(250),
-        PRIMARY KEY(userId)
-      );
-          CREATE TABLE IF NOT EXISTS BOOKING (
-            bookingId SERIAL,
-            parkingId INT,
-            email VARCHAR(250),
-            username VARCHAR(250),
-            arrival_time VARCHAR(250),
-            depature_time VARCHAR (30),
-            PRIMARY KEY(bookingId)
-          );
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(250) UNIQUE NOT NULL,
+      username VARCHAR(250) UNIQUE NOT NULL,
+      password VARCHAR(250) UNIQUE NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS BOOKING (
+      id SERIAL PRIMARY KEY,
+      parkingId INT,
+      email VARCHAR(250) UNIQUE NOT NULL,
+      username VARCHAR(250),
+      arrival_time VARCHAR(250) NOT NULL,
+      depature_time VARCHAR (30) NOT NULL
+    );
           
-          CREATE TABLE IF NOT EXISTS PARKING (
-            parkingId SERIAL,
-            createdOn TIMESTAMP NOT NULL DEFAULT NOW(),
-            name VARCHAR (200),
-            location VARCHAR(300),
-            status VARCHAR(250),
-            PRIMARY KEY (parkingId)
-          );
-      `);
+    CREATE TABLE IF NOT EXISTS PARKING (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR (200) UNIQUE NOT NULL,
+      location VARCHAR(300) UNIQUE NOT NULL,
+      status VARCHAR(250)
+    );
+  `);
     const result = await con.query(
       "SELECT COUNT(1) FROM admin WHERE email = 'admin@gmail.com';",
     );
@@ -77,6 +75,14 @@ class Database {
     await con.query('DROP TABLE IF EXISTS ADMIN,BOOKING,PARKING CASCADE;');
     await con.end();
   }
+
+  static async createQuery(queryText, params) {
+    const con = Database.connection();
+    const result = await con.query(queryText, params)
+    await con.end();
+
+    return result;
+  } 
 }
 
 export default Database;
