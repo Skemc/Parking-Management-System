@@ -1,0 +1,33 @@
+{
+  "name": "parking-management-system",
+  "version": "1.0.0",
+  "description": "Parking Management System will ensure access to free parking slots",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha  --timeout 5000 --require babel-core/register --require babel-polyfill --exit ./test/index.test.js",
+    "start": "nodemon --require babel-core/register --require babel-polyfill ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skemc/Parking-Management-System.git"
+  },
+  "author": "The Fantastic Seven Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skemc/Parking-Management-System/issues"
+  },
+  "homepage": "https://github.com/Skemc/Parking-Management-System#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "chai": "4.2.0",
+    "chai-http": "4.3.0",
+    "mocha": "7.0.0",
+    "nodemon": "2.0.2"
+  },
+  "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "express": "4.17.1"
+  }
+}
