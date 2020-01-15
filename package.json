@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=production npm run createTables && cross-env NODE_ENV=production babel-node ./src/server.js",
     "dev": "cross-env NODE_ENV=production node_modules/.bin/nodemon ./src/server.js --exec babel-node --",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "createTables": "cross-env NODE_ENV=production node --require @babel/polyfill --require @babel/register src/db/createTables.js",
+    "createTables": "node --require @babel/polyfill --require @babel/register src/db/createTables.js",
     "deleteTables": "node --require @babel/polyfill --require @babel/register src/db/deleteTables.js"
   },
   "repository": {
