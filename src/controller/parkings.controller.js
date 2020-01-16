@@ -22,7 +22,7 @@ class ParkingController {
 
     static async viewAllParkings(req, res) {
       try {
-        const Parkings = await Parking.viewAll(req.userData);
+        const Parkings = await Parking.ViewAll(req.userData);
         if (Parkings.length == 0) {
           return res.status(404).json({
             status: 404,

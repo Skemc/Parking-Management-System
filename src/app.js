@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import parkingsRoutes from './routes/parking.route';
-import bookingRoutes from './routes/booking.route';
 
 
 dotenv.config();
@@ -22,7 +21,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/parkings', parkingsRoutes);
-app.use('/api/bookings', bookingRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not found');
