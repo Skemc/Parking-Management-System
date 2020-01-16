@@ -1,14 +1,14 @@
-import Parking from '../model/parkings.model'
+import Booking from '../model/booking.models'
 
-class ParkingController {
-    static async createParking(req, res) {
+class BookingController {
+    static async createBooking(req, res) {
         try {
-          const createdParking = await Parking.create(req.body);
+          const createdBooking = await Booking.create(req.body);
           res.status(201).json({
             status: 201,
             data: [{
-              id: createdParking.id,
-              message: 'Created parking record',
+              id: createdBooking.id,
+              message: 'Created booking record',
             }],
           });
         } catch (error) {
@@ -19,11 +19,10 @@ class ParkingController {
           });
         }
       }
-
-    static async viewAllParkings(req, res) {
+    static async viewAllBookings(req, res) {
       try {
-        const Parkings = await Parking.viewAll(req.userData);
-        if (Parkings.length == 0) {
+        const bookings = await Booking.ViewAllBooking();
+        if (bookings.length == 0) {
           return res.status(404).json({
             status: 404,
             error: 'No data available',
@@ -31,7 +30,7 @@ class ParkingController {
         }
         return res.status(200).json({
           status: 200,
-          data: Parkings,
+          data: bookings,
         });
       } catch (error) {
           console.log(error);
@@ -43,4 +42,4 @@ class ParkingController {
     }
   }
   
-  export default ParkingController;
+  export default BookingController;
