@@ -22,7 +22,7 @@ class ParkingController {
 
     static async viewAllParkings(req, res) {
       try {
-        const Parkings = await Parking.viewAll(req.userData);
+        const Parkings = await Parking.ViewAll();
         if (Parkings.length == 0) {
           return res.status(404).json({
             status: 404,
@@ -32,6 +32,37 @@ class ParkingController {
         return res.status(200).json({
           status: 200,
           data: Parkings,
+        });
+      } catch (error) {
+          console.log(error);
+          res.status(500).json({
+            status: 500,
+            error: 'Internal Server Error!',
+          });
+      }
+    }
+
+    static async viewSpecificParking(req, res) {
+      const id = parseInt(req.params.parkingId, 10);
+      if (Number.isNaN(id)) {
+        return res.status(400).json({
+          status: 400,
+          error: 'The red-flag ID must be a valid integer',
+        });
+      
+      }
+
+      try {
+        const parking = await Parking.viewSpecific(id);
+        if (parking.length == 0) {
+          return res.status(404).json({
+            status: 404,
+            error: 'No data available',
+          });
+        }
+        return res.status(200).json({
+          status: 200,
+          data: parking,
         });
       } catch (error) {
           console.log(error);
