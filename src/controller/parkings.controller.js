@@ -1,6 +1,25 @@
 import Parking from '../model/parkings.model'
 
 class ParkingController {
+    static async createParking(req, res) {
+        try {
+          const createdParking = await Parking.create(req.body);
+          res.status(201).json({
+            status: 201,
+            data: [{
+              id: createdParking.id,
+              message: 'Created parking record',
+            }],
+          });
+        } catch (error) {
+          console.log(error);
+          res.status(500).json({
+            status: 500,
+            error: 'Internal Server Error!',
+          });
+        }
+      }
+
     static async viewAllParkings(req, res) {
       try {
         const Parkings = await Parking.ViewAll(req.userData);

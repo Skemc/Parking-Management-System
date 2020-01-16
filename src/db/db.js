@@ -27,7 +27,7 @@ class Database {
       id SERIAL PRIMARY KEY,
       email VARCHAR(250) UNIQUE NOT NULL,
       username VARCHAR(250) UNIQUE NOT NULL,
-      password VARCHAR(250) UNIQUE NOT NULL
+      password VARCHAR(250) NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS BOOKING (
@@ -41,8 +41,8 @@ class Database {
           
     CREATE TABLE IF NOT EXISTS PARKING (
       id SERIAL PRIMARY KEY,
-      name VARCHAR (200) UNIQUE NOT NULL,
-      location VARCHAR(300) UNIQUE NOT NULL,
+      name VARCHAR (200) NOT NULL,
+      location VARCHAR(300) NOT NULL,
       status VARCHAR(250)
     );
   `);
@@ -50,21 +50,15 @@ class Database {
       "SELECT COUNT(1) FROM admin WHERE email = 'admin@gmail.com';",
     );
     if (result.rows[0].count === '0') {
-      const user = new User(
-        '',
-        'admin@gmail.com',
-        'fantastic7',
-        '1234567890',
-      );
       await con.query(`Insert into admin(
         email,
         username,
-        password,
+        password
       ) values(
-        '${user.email}',
-        '${user.username}',
-        '${user.password}'
-      ) returning *`);
+        'admin@gmail.com',
+        'fantastic7',
+        '1234567890'
+      ) returning *;`);
     }
     await con.end();
   }
