@@ -7,7 +7,7 @@ class Parking {
     }) {
         const createdParking = await Database.createQuery(query.createParking,
           [name, location, 'available']);
-        return createdParking.rows[0];
+        return createdParking.rows;
     }
 
     static async ViewAll() {
@@ -18,6 +18,10 @@ class Parking {
     static async viewSpecific(id) {
         const parking = await Database.createQuery(query.viewParking, [id]);
         return parking.rows[0];
+    }
+    static async searchParking(search) {
+        const { rows } = await Database.createQuery(query.searchParking, [search]);
+        return rows;
     }
 }
   

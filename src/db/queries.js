@@ -6,6 +6,7 @@ const addBooking = `INSERT INTO BOOKING (email, username, arrival_time, depature
 const viewAllBookings = 'SELECT * FROM BOOKING';
 const viewParking = 'SELECT * FROM PARKING WHERE id = $1';
 const findUser = 'SELECT * FROM ADMIN WHERE email = $1 AND password = $2';
+const searchParking = 'SELECT * FROM PARKING WHERE name = $1 OR location = $1 OR status = $1';
 
 export default {
     viewParkings,
@@ -13,5 +14,6 @@ export default {
     addBooking,
     viewAllBookings,
     viewParking,
-    findUser
+    findUser,
+    searchParking,
 }
