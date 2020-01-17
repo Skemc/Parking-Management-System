@@ -32,7 +32,7 @@ class Database {
     CREATE TABLE IF NOT EXISTS BOOKING (
       id SERIAL PRIMARY KEY,
       parkingId INT,
-      email VARCHAR(250) UNIQUE NOT NULL,
+      email VARCHAR(250) NOT NULL,
       username VARCHAR(250),
       arrival_time VARCHAR(250) NOT NULL,
       depature_time VARCHAR (30) NOT NULL

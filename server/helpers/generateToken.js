@@ -10,7 +10,7 @@ class GenerateToken {
       email: user.email,
       username: user.username
     };
-    return jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1h' });
+    return jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1d' });
   }
 }
 
