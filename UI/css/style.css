@@ -1,0 +1,192 @@
+/*CSS Variables*/
+
+:root{
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html{
+	box-sizing: border-box;
+	font-family: Verdana, Helvatica, sans-serif;
+	color: var(--dark);
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: var(--light);
+	line-height: 1.4;
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 5px;
+	height: 100vh;
+	
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    background: rgb(16, 16, 75);
+    box-shadow: 2px 1px 6px;
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+.logo {
+    float: left;
+    height: inherit;
+    margin-left: 0em;
+    padding-left: 20px;
+    margin-top: 7px;
+}
+.logo img{
+    height: 70px;
+}
+/* Top Container*/
+
+.top-container {
+	display: grid;
+	grid-gap: 10px;
+}
+
+/*Showcase*/
+
+.showcase {
+	min-height: 400px;
+	background: url(../assets/parking3.jpg);
+	background-size: cover;
+	background-position: left;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+
+.showcase h1{
+	font-size: 3rem;
+	margin-bottom: 0;
+	color: var(--light);
+	margin-top: 5px;
+}
+
+.showcase p{
+	margin-top: -5px;
+	font-size: 1.3rem;
+	margin-bottom: 0;
+	color: var(--light);
+}
+.btn{
+	background: rgb(16, 16, 75);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+	margin-top: 10px;
+}
+
+/*FOOTER*/
+footer{
+	margin-top: 0.1rem;
+	background: rgb(16, 16, 75);
+	color: var(--light);
+	text-align: center;
+	padding: 0.1rem;
+}
+
+/*RESERVATION*/
+.container{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.reserve-box{
+	min-height: 400px;
+	background-size: cover;
+	background-position: left;
+	background-color: var(--dark);
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	width: 280px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	color: white;
+	border-radius: .25rem;
+}
+.reserve-box h5{
+	float: left;
+	font-size: 20px;
+	border-bottom: 6px solid #4caf50;
+	margin-top: -30px;
+	margin-bottom: 30px;
+	padding: 5px;
+}
+
+.calendar{
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid #4caf50;
+}
+
+.calendar input{
+	border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: 20px;
+	width: 80%;
+	float: left;
+	margin: 0 10px;
+}
+
+.btn1{
+	width: 100%;
+	background: none;
+	border: 1px solid #4caf50;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 12px 0;
+	padding: 0.6rem 1.3rem;
+}
+.reserve-box input[type=submit]:hover {
+    background-color: #45a049;
+}
+  /*Media Querries*/
+
+@media (max-width: 768px){
+	.showcase h1{
+		font-size: 2.5rem;
+	}
+	.showcase p{
+		font-size: 1rem;
+	}
+	.btn{
+		padding: 0.3rem 0.7rem;
+	}
+}
+
+@media (max-width: 1280px){
+	.showcase h1{
+		font-size: 2.5rem;
+	}
+	.btn{
+		padding: 0.3rem 0.7rem;
+	}
+	}
