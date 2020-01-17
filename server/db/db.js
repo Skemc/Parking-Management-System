@@ -29,7 +29,6 @@ class Database {
       username VARCHAR(250) UNIQUE NOT NULL,
       password VARCHAR(250) NOT NULL
     );
-
     CREATE TABLE IF NOT EXISTS BOOKING (
       id SERIAL PRIMARY KEY,
       parkingId INT,
@@ -45,6 +44,8 @@ class Database {
       location VARCHAR(300) NOT NULL,
       status VARCHAR(250)
     );
+
+    INSERT INTO PARKING (name, location, status) values ('Makuzaparking', 'nyarugenge', 'available');
   `);
     const result = await con.query(
       "SELECT COUNT(1) FROM admin WHERE email = 'admin@gmail.com';",

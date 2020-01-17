@@ -8,8 +8,8 @@ const data = {
     password: 'emmanuel123',
   },
   validAdmin: {
-    email: 'fantasticseven@gmail.com',
-    password: 'password',
+    email: 'admin@gmail.com',
+    password: '1234567890',
   },
   validParking: {
     name: 'Makuzaparking',
