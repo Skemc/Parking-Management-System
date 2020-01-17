@@ -6,8 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production npm run createTables && cross-env NODE_ENV=production babel-node ./src/server.js",
     "dev": "cross-env NODE_ENV=production node_modules/.bin/nodemon ./src/server.js --exec babel-node --",
-    "test": "cross-env NODE_ENV=production npm run createTables && nyc --reporter=html --reporter=text mocha  --timeout 5000 --require @babel/polyfill --require @babel/register --exit ./test/index.test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "mocha  --timeout 5000 --require @babel/polyfill --require @babel/register --exit ./server/test/index.test.js",
     "createTables": "node --require @babel/polyfill --require @babel/register src/db/createTables.js",
     "deleteTables": "node --require @babel/polyfill --require @babel/register src/db/deleteTables.js",
     "stop-win": "Taskkill /IM node.exe /F"

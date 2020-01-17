@@ -3,7 +3,7 @@ import Booking from '../model/booking.models'
 class BookingController {
     static async createBooking(req, res) {
         try {
-          const createdBooking = await Booking.create(req.body);
+          const createdBooking = await Booking.addBooking(req.body);
           res.status(201).json({
             status: 201,
             data: [{
@@ -21,7 +21,7 @@ class BookingController {
       }
     static async viewAllBookings(req, res) {
       try {
-        const bookings = await Booking.ViewAllBooking();
+        const bookings = await Booking.viewAllBooking();
         if (bookings.length == 0) {
           return res.status(404).json({
             status: 404,
