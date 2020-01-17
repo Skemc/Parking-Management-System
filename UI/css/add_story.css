@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Baloo|Mitr|Roboto|Sigmar+One&display=swap');
+
+
+body {
+     font-family: 'Roboto', sans-serif;
+    color: #555;
+    background: #fff;
+    margin: 0;
+}
+
+.containe {
+    padding: 1em;
+    max-width: 873px;
+    margin: auto;
+    margin-top: 200px;
+
+}
+label {
+    color: #000;
+}
+h4 {
+    color: #000;
+
+}
+.quote {
+    font-weight: 100;
+    font-size: 2em;
+    margin-bottom: 50px; 
+    color: #000;
+    grid-column: 1 / -1;
+}
+
+
+.article-card:hover {
+    border: 0.6px solid #3A2EFF;
+    cursor: pointer;
+
+}
+
+form input {
+    position: relative;
+        width: 100%;
+        padding: 1em;
+        outline: none;
+        position: relative;
+        box-sizing: border-box;
+        border-width: 0;
+           border-bottom: .6px solid #0029FA;
+    }
+    textarea{
+        width: 100%;
+        min-height: 200px;
+        max-height: 350px;
+        padding: 37px 15px 20px 15px;
+        box-sizing: border-box;
+        border: .6px solid #0029FA;
+    }
+    form input:focus {
+        border-bottom: 2.2px solid #0029FA;
+    }
+    form textarea:focus {
+        border: 2px solid #0029FA;
+    }
+.row {
+    margin-bottom: 30px;
+}
+form input.btn{
+    width: fit-content;
+    padding: 10px 40px;
+    border: none;
+    color: #fff;
+    background: #3E38F2;
+    cursor: pointer;
+}
+
+input[type='file']{
+  font-size:15px;
+}
+.prime-inpt input[type="file"]{
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: fit-content;
+  margin: 20px 15px;
+}
+ .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+  background: #0029FA;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  z-index:1;
+}
+.float:focus{
+  border: 0;
+
+}
+.my-float{
+  margin-top:22px;
+  color: #fff;
+}
+
+
+/* type */
+.radio-group {
+    padding: 20px 13px;
+}
+.radio-group label{
+font-size: 14px;
+    color: #555;
+
+}
+.radio {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+
+}
+.radio:not(:last-child) {
+    margin-bottom: 15px;
+}
+.radio input[type = "radio"] {
+    display: none;
+}
+.radio span {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid #0029FA;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+.radio span::after {
+    content: "";
+    height: 7px;
+    width: 7px;
+    background: #0029FA;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 300ms ease-in-out 0s;
+}
+.radio:hover span {
+    transform: scale(1.2);
+}
+.radio input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%,-50%) scale(.9);
+}

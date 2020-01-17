@@ -1,0 +1,124 @@
+body {
+    background-image: url(../assets/Annotation\ 2020-01-15\ 210450.png);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.article-container-header {
+    display: flex;
+    justify-content: center;
+   align-items: stretch;
+}
+.article-container-header > div {
+    margin-right: 10px;
+    padding: 2px;
+}
+.article-container-title >div .number3{
+    margin-right: 0;
+}
+.number{
+    color: black;
+}
+
+
+.flagged-article {
+     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(194.25px, 1fr));
+    grid-gap: 1em;
+
+
+}
+.containerz {
+    padding: 1em;
+    max-width: 873px;
+    margin: auto;
+    margin-top: 200px;
+
+}
+.btn#flag {
+    margin-left: 7px;
+    border-width: 0;
+    background: #007FE0;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.see-all a {
+    color: #007FE0;
+}
+.article-container-title {
+    
+    border-bottom: 1px solid rgb(16, 16, 75);
+    width: 33%;
+    text-align: center;
+}
+.article-container-title p {
+    color: #000;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+
+}
+p#quote{
+    font-weight: 400;
+     text-align: left;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+.flag-msg {
+    background: #A65F46;
+    padding: 12px 7px 15px 7px;
+    color: #000;
+    margin-bottom: 10px
+}
+.article-card-flag {
+    border-left: 4px solid rgb(16, 16, 75);
+    height: fit-content;
+    padding: 0;
+    position: relative;
+    background: #fff;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.article-card-flag:hover {
+    box-shadow: -4px 7px 7px -5px rgba(0,0,0,0.92);
+    border-left: 4px solid red;
+
+    /* outline: 0.6px solid #0029FA;
+    border-bottom: 0.6px solid #fff; */
+    /* outline: 0.8px solid #0029FA; */
+
+}
+.g {
+    display: flex;
+    padding: 10px 15px 10px 10px;
+}
+.content-field {
+padding: 0 0 0 10px;
+flex: 2;
+}
+.content-field h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.parent {
+  position: relative;
+  width: 19%;
+  min-width: 70px;
+  /* border: 1px solid blue */
+
+}
+.aspect-ratio {
+  width: 100%;
+  height: auto;
+}
+/* .content {
+  position: absolute;
+  width: 100%;
+  top: 0; left: 0;
+} */

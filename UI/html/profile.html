@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/add_story.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/article_detail.css">
+    <link rel="stylesheet" href="../css/article_detai.css">
+    <link rel="stylesheet" href="../css/admin_dashboard.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Document</title>
+</head>
+<a href="#/" class="float" id="flag">
+    <i class="fa fa-plus my-float"></i>
+</a>
+<header>
+    <div class="container">
+
+    <a href="#/">
+        <img src="../assets/newlogo.png" alt="" class="logo "srcset="">
+    </a>
+    
+    <nav class="site-nav">
+        <ul>
+            
+    
+            <li><a href="./adminLogin.html" id="side-nav-item"></i>logout</a></li>
+        </ul>
+    </nav>
+
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+
+    </div>
+</header>
+
+<body>
+    <!-- The Modal flag -->
+    <div id="myFlagModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content flag">
+            <div class="row">
+                <div class="input-field">
+                    <!-- <h4>What's wrong with this article?</h4> -->
+                    <h2 class="quote">Add a parking place</h2>
+                    
+                    <form action="/stories" method="post">
+                        <div class="row">
+                            <label for="title">Name</label>
+                            <input type="text" name="title" placeholder="Makuza Peace Plaza Parking">
+                        </div>
+                    
+                        
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="title">Location</label>
+                                <input type="text" name="category" placeholder="latitude, longitude">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field">
+                                <label for="title">Spots number</label>
+                                <input type="text" name="category" placeholder="Spots number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="images">
+                                <label> Upload images:</label>
+                                <div class="prime-inpt">
+                    
+                                    <input type="file" class="number_input_2" autofocus multiple />
+                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="option">
+    
+                <button class="btn" id="flag-sure">Add</button>
+                <button class="btn close" id="cancel">Cancel</button>
+    
+            </div>
+        </div>
+    
+    </div>
+    <div class="containerz">
+
+        <p class="quote" id="quote">Admin/ <span>Dashboard</span></p>
+        
+
+        <div class="article-card-flag">
+            <div id="card-article">
+                <a href="#/">
+                    <div class="g" class="text">
+
+                        <div class="parent">
+                            <img class="aspect-ratio"
+                                src="../assets/CBT-April19-InFocus-CityParking-SLIDER.jpg" />
+
+                        </div>
+
+                        <div class="content-field">
+                            <h3 class="article-card-title">Makuza Peace Plaza Parking</h3>
+                            <div class="article-container-header">
+                                <div class="article-container-title">
+                                    <div class="number">0</div>
+                                    <p>Available</p>
+                            
+                                </div>
+                                <div class="article-container-title">
+                                    <div class="number">1</div>
+                            
+                                    <p>Taken</p>
+                            
+                                </div>
+                                <div class="article-container-title number3">
+                                    <div class="number">0</div>
+                            
+                                    <p>Reserved</p>
+                            
+                            
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+
+
+        </div>
+
+        <div class="article-card-flag">
+            <div id="card-article">
+                <a href="#/">
+                    <div class="g" class="text">
+        
+                        <div class="parent">
+                            <img class="aspect-ratio"
+                                src="../assets/_107065240_gettyimages-937322092.jpg" />
+        
+                        </div>
+        
+                        <div class="content-field">
+                            <h3 class="article-card-title">Makuza Peace Plaza Parking</h3>
+                            <div class="article-container-header">
+                                <div class="article-container-title">
+                                    <div class="number">0</div>
+                                    <p>Available</p>
+        
+                                </div>
+                                <div class="article-container-title">
+                                    <div class="number">1</div>
+        
+                                    <p>Taken</p>
+        
+                                </div>
+                                <div class="article-container-title number3">
+                                    <div class="number">0</div>
+        
+                                    <p>Reserved</p>
+        
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        
+            </div>
+        
+        
+        </div>
+
+        <div class="article-card-flag">
+            <div id="card-article">
+                <a href="#/">
+                    <div class="g" class="text">
+        
+                        <div class="parent">
+                            <img class="aspect-ratio"
+                                src="../assets/1495339957-jamaica-plain-parking-spaces.jpg" />
+        
+                        </div>
+        
+                        <div class="content-field">
+                            <h3 class="article-card-title">Makuza Peace Plaza Parking</h3>
+                            <div class="article-container-header">
+                                <div class="article-container-title">
+                                    <div class="number">0</div>
+                                    <p>Available</p>
+        
+                                </div>
+                                <div class="article-container-title">
+                                    <div class="number">1</div>
+        
+                                    <p>Taken</p>
+        
+                                </div>
+                                <div class="article-container-title number3">
+                                    <div class="number">0</div>
+        
+                                    <p>Reserved</p>
+        
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        
+            </div>
+        
+        
+        </div>
+
+        <div class="article-card-flag">
+            <div id="card-article">
+                <a href="#/">
+                    <div class="g" class="text">
+        
+                        <div class="parent">
+                            <img class="aspect-ratio"
+                                src="../assets/cq5dam.web.1280.1280.jpeg" />
+        
+                        </div>
+        
+                        <div class="content-field">
+                            <h3 class="article-card-title">Makuza Peace Plaza Parking</h3>
+                            <div class="article-container-header">
+                                <div class="article-container-title">
+                                    <div class="number">0</div>
+                                    <p>Available</p>
+        
+                                </div>
+                                <div class="article-container-title">
+                                    <div class="number">1</div>
+        
+                                    <p>Taken</p>
+        
+                                </div>
+                                <div class="article-container-title number3">
+                                    <div class="number">0</div>
+        
+                                    <p>Reserved</p>
+        
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        
+            </div>
+        
+        
+        </div>
+
+       
+
+    </div>
+    <script src="../scripts/article_detail.js"></script>
+    <script src="../scripts/article_detail_flag.js"></script>
+    <script src="../scripts/navbar.js"></script>
+</body>
+
+</html>
