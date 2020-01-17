@@ -14,6 +14,11 @@ class Parking {
         const parkings = await Database.createQuery(query.viewParkings);
         return parkings.rows;
     }
+
+    static async viewSpecific(id) {
+        const parking = await Database.createQuery(query.viewParking, [id]);
+        return parking.rows[0];
+    }
 }
   
 export default Parking;

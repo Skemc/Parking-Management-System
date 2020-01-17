@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.route';
 import parkingsRoutes from './routes/parking.route';
 import bookingRoutes from './routes/booking.route';
 
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
   });
 });
 
+app.use('/api/auth', userRoutes);
 app.use('/api/parkings', parkingsRoutes);
 app.use('/api/bookings', bookingRoutes);
 

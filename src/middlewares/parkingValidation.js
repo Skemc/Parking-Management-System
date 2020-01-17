@@ -42,6 +42,33 @@ class ParkingValidation {
 
     next();
   }
+
+  static parkingId(req, res, next) {
+    const schema = Joi.object({
+      parkingId: Joi.number()
+        .integer()
+        .positive()
+        .min(1)
+        .messages({
+          'number.base': '{{#label}} must be a number',
+          'string.min': '{{#label}} length must be at least {{#limit}} characters long',
+          'number.integer': '{{#label}} must be an integer',
+          'number.positive': '{{#label}} must be a positive number',
+          'number.unsafe': '{{#label}} must be a safe number',
+          'any.required': '{{#label}} is required',
+        }),
+    });
+
+    const { error } = schema.validate(req.params);
+    if (error) {
+      return res.status(401).json({
+        status: 401,
+        error: error.message,
+      });
+    }
+
+    next();
+  }
 }
 
 export default ParkingValidation;

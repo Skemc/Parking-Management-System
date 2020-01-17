@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get('/', ParkingsController.viewAllParkings);
 router.post('/', ParkingValidation.validateParking, ParkingsController.createParking);
+router.get('/:parkingId', ParkingValidation.parkingId, ParkingsController.viewSpecificParking);
 
 export default router;
